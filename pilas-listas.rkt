@@ -6,7 +6,7 @@
 ;;;Juan Steban Diaz Ramirez - 2024147
 ;;;Natalia Lopez Osorio - 2025618
 
-;;;; Stack/Pila - Representación como listas ;;;;;;;;;;;;;;;;;;;;
+;;;; Stack/Pila - Representación como listas ;;;;;;;;;;;;
 
 
 ;;Gramatica para la pila
@@ -91,4 +91,3 @@
 ;;pruebas
 ;;(pop (push 34 (push 8 (push 10 (push 1(push 2(push 3 (empty-stack))))))))
 ;;(pop (push 10 (push 1(push 2(push 3 (empty-stack))))))
-;;(pop (push 2(push 3 (empty-stack))))
