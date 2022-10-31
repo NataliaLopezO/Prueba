@@ -1,0 +1,37 @@
+#lang eopl
+;;;; Stack/Pila - Representación como listas ;;;;;;;;;;;;;;;;;;;;
+
+;; empty-stack
+(define empty-stack
+  (lambda ()
+    (list 'empty-stack)
+  )
+)
+
+;; push
+(define push
+  (lambda (val stack)
+    (list 'push val stack)
+  )
+)
+
+
+;;top
+(define top
+  (lambda (stack)
+    (if (eqv? stack 'empty-stack)
+        (eopl:error 'top "No binding for ~s" stack)
+        (cadr stack)
+    )
+   )
+)
+
+;;pop
+(define pop
+  (lambda (stack)
+    (cond [(eqv? stack 'empty-stack) (eopl:error 'pop "No binding for ~s" stack)]
+          [(eqv? (car stack) 'push) (top stack)]
+          [else  (cdr stack)]
+    )
+   )
+)
